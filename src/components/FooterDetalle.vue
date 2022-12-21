@@ -46,7 +46,7 @@
 <style scoped>
 .wrapper__footer {
     margin-top: 1.5rem;
-    background-color: var(--background-navbar);
+    background-color: #fff;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     display: flex;

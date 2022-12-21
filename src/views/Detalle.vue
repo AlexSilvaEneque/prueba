@@ -79,8 +79,6 @@
     })
 
     onMounted(() => {
-        // aux.value = document.documentElement.clientWidth
-        // console.log(aux.value);
         id.value = route.params.id
         getPost()
         getComments()
@@ -144,7 +142,6 @@ i {
 }
 .wrapper__detalle {
     width: 100%;
-    overflow-x: hidden;
 }
 .wrapper__detalle__coments,
 .wrapper__detalle__main {
