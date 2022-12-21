@@ -46,18 +46,32 @@
             postId: id.value
         }
 
-        const res = await fetch(`https://61c35faa9cfb8f0017a3eb2e.mockapi.io/api/v1/posts/${id.value}/comments`, {
+        try {
+
+            const res = await fetch(`https://61c35faa9cfb8f0017a3eb2e.mockapi.io/api/v1/posts/${id.value}/comments`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(send)
-        })
-        
-        const p = await res.json()
-        comment.value = ''
+                body: JSON.stringify(send)
+            })
+            
+            const result = await res.json()
 
-        getComments()
+            if (result.includes('Max')) {
+                comment.value = ''
+                throw Error(result)
+            }
+
+            comment.value = ''
+
+            getComments()
+            
+        } catch (error) {
+            alert(error)
+        }
+
+        
     }
 
     watch(cambio, (a) => {
