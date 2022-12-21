@@ -57,7 +57,7 @@
 <template>
     <div class="wrapper__main">
         <div class="wrapper__imagen">
-            <img src="/img/imagen1.jpg" alt="" class="imagen-img">
+            <img src="/img/imagen1.jpg" alt="image" class="imagen-img">
         </div>
         <div class="wrapper__register">
             <div class="wrapper__register--header">
@@ -70,8 +70,8 @@
                         <label>Foto de perfil</label>
                         <input type="file" ref="imageSelector" v-show="false" @input="pickfile" accept="image/png, image/jpeg">
                         <div class="input__img" :class="{ 'background-image': `url(${preview})` }" @click="loadImage">
-                            <img src="/img/user.png" alt="" class="icon" v-if="!preview">
-                            <img :src="preview" alt="" class="icon" v-if="preview">
+                            <img src="/img/user.png" alt="img" class="icon" v-if="!preview">
+                            <img :src="preview" alt="preview" class="icon" v-if="preview">
                         </div>
                         <span v-if="bol1">Necesita una imagen*</span>
                     </div>

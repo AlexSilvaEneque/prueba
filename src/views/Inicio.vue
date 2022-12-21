@@ -46,7 +46,7 @@
 <template>
     <div class="wrapper__main">
         <div class="wrapper__imagen">
-            <img src="/img/imagen1.jpg" alt="" class="imagen-img">
+            <img src="/img/imagen1.jpg" alt="image" class="imagen-img">
         </div>
         <div class="wrapper__inicio">
             <h1>Ultimas promociones</h1>
@@ -54,8 +54,8 @@
                 <div class="inicio__card" v-for="item in list" :key="item">
                     <div @click="changeFlag(item.id)" class="card">
                         <div class="main">
-                            <img :src="item.image" alt="" class="main__img">
-                            <img :src="item.user.avatar" alt="" class="user__avatar">
+                            <img :src="item.image" alt="item" class="main__img">
+                            <img :src="item.user.avatar" alt="user" class="user__avatar">
                         </div>
                         <div class="description">
                             <p class="description--title">{{ item.title }}</p>

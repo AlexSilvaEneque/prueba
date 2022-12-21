@@ -89,7 +89,7 @@
     <Header class="header" />
     <div class="wrapper__main" v-if="info">
         <div class="wrapper__imagen">
-            <img src="/img/imagen1.jpg" alt="" class="imagen-img">
+            <img src="/img/imagen1.jpg" alt="imagen" class="imagen-img">
         </div>
         <div class="wrapper__detalle">
             <div class="wrapper__detalle__main">
@@ -101,7 +101,7 @@
                 <img :src="info.image" alt="imagen producto" class="img-producto">
                 <div class="body__user">
                     <div class="body__user__header">
-                            <img :src="info.user.avatar" alt="" class="user__avatar">
+                            <img :src="info.user.avatar" alt="avatar" class="user__avatar">
                         <span class="main__user-nombre">{{ info.user.firstName }} {{ info.user.lastName }}</span>
                     </div>
                     <p class="body__user__body">

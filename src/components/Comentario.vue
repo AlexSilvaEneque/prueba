@@ -6,7 +6,7 @@
     <div class="wrapper__comentario" v-if="comment">
         <div class="wrapper__comentario-header">
             <div class="user__img">
-                <img :src="comment.user.avatar" alt="">
+                <img :src="comment.user.avatar" alt="avatar">
             </div>
             <span>{{ comment.user.firstName }} {{ comment.user.lastName }}</span>
         </div>
